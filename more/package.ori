@@ -1,0 +1,31 @@
+{
+  (src) = {
+    greet.ts: `
+      export default function greet(name: string = "world") {
+        return \`Hello, \${name}!\`;
+      }
+    `
+
+    tsconfig.json: `{
+      "module": "ESNext"
+    }`
+  }
+
+  dist = tsc(src)
+
+  index.html: `<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="module">
+          import greet from "./dist/greet.js";
+
+          const message = greet();
+          document.body.innerHTML = \`<h1>\${message}</h1>\`;
+        </script>
+      </head>
+      <body></body>
+    </html>
+  `
+}

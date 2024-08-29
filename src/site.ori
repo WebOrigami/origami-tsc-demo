@@ -1,0 +1,4 @@
+{
+  dist = tsc(sample.yaml)
+  index.html
+}

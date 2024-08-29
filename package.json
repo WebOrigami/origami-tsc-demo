@@ -1,0 +1,14 @@
+{
+  "name": "origami-start",
+  "type": "module",
+  "dependencies": {
+    "@weborigami/origami": "0.0.64-beta.2",
+    "@weborigami/gdrive": "0.0.4",
+    "@weborigami/gist": "0.0.2",
+    "@weborigami/ts": "0.0.4"
+  },
+  "scripts": {
+    "build": "ori @copy src/site.ori, @clean @files/build",
+    "start": "ori @serve @watch src, =@debug site.ori"
+  }
+}

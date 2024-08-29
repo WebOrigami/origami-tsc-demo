@@ -1,0 +1,5 @@
+{
+  gdrive = package:@weborigami/gdrive/auth
+  gist = package:@weborigami/gist
+  tsc = package:@weborigami/ts/tsc
+}

@@ -1,0 +1,17 @@
+ReadMe.md: |
+  This YAML project embodies a compilable TypeScript project.
+
+src:
+  greet.ts: |
+    import defaultName from "./name.js";
+    export default function greet(name: string = defaultName) {
+      return `Hello, ${name}!`;
+    }
+
+  name.ts: |
+    export default "world";
+
+tsconfig.json: |
+  {
+    "module": "ESNext"
+  }
